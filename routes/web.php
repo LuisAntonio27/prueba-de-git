@@ -21,10 +21,13 @@ Route::get('/portfolio', 'PortfolioController')->name('portfolio');
 Route::view('/contact', 'contact')->name('contact');
 Route::post('users/{id}', function ($id) {
     return 'Cambio en las rutas para post';
+});
 Route::get('/proyectos', function ($id) {
     return 'Hola desde proyectos';
 });
 
 // Route::resource('projects', 'PortfolioController')->only(['index', 'show']);
 
-Route::resource('projects', PortfolioController)->only(['index', 'show']);
+Route::resource('projects', function(){
+    return 'Vista proyectos';
+})->only(['index', 'show']);
