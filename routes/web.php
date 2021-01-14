@@ -15,6 +15,9 @@ Route::view('/', 'home')->name('home');
 Route::view('/about', 'about')->name('about');
 Route::get('/portfolio', 'PortfolioController')->name('portfolio');
 Route::view('/contact', 'contact')->name('contact');
+Route::get('/proyectos', function ($id) {
+    return 'Hola desde proyectos';
+});
 
 // Route::resource('projects', 'PortfolioController')->only(['index', 'show']);
 
